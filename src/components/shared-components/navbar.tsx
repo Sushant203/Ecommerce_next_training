@@ -8,7 +8,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <nav className=' container flex items-center justify-between gap-10 py-3 border-b'>
+    <nav className=' container flex items-center justify-between gap-10 py-3 border-b bg-orange-500 text-slate-50 shadow-md shadow-slate-200 rounded-sm'>
         <section className='text-2xl font-bold'>
             logo
         </section>
@@ -32,7 +32,7 @@ const Navbar = (props: Props) => {
         <section className='flex items-center space-x-4'>
           <Button asChild>
             <Link href={'\login'}>Login</Link></Button>
-           <IoCartOutline  size={20}/>
+           <IoCartOutline  size={20} />
             
         </section>
     </nav>

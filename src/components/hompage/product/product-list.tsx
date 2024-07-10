@@ -6,7 +6,7 @@ type Props = {}
 
 const ProductList = (props: Props) => {
   return (
-    <section>
+    <section className='grid grid-cols-5 gap-5 mt-5'>
         {
             (productData as IProduct[]).map((product,i)=>{
                 
