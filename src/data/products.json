@@ -1,0 +1,96 @@
+[
+    {
+        "id":"1",
+        "name":"G-shock 2815",
+        "description":"Best casio G-Shock watches by price range",
+        "price":5000,
+        "discount":10,
+        "model":"G-rado",
+        "category":
+            {
+                "name":"watch",
+                "imageURL":"https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg"
+        
+            }
+        ,
+        "stockQuantity":15,
+        "imageURL":["https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg",
+        "https://i.pinimg.com/originals/4e/df/df/4edfdff78d9b46aa7e20451d8752f757.jpg"
+    ],
+     "reviews":[{
+        "username": "ram",
+        "rating":4.5,
+        "message":"very nice product"
+}]
+},
+
+{
+        "id":"2",
+        "name":"G-shock 2815",
+        "description":"Best casio G-Shock watches by price range",
+        "price":5000,
+        "discount":10,
+        "model":"G-rado",
+        "category": 
+            {
+                "name":"watch",
+                "imageURL":"https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg"
+        
+            },
+        "stockQuantity":15,
+        "imageURL":["https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg",
+        "https://i.pinimg.com/originals/4e/df/df/4edfdff78d9b46aa7e20451d8752f757.jpg"
+    ],
+     "reviews":[{
+        "username": "ram",
+        "rating":4.5,
+        "message":"very nice product"
+}]
+     },
+{
+        "id":"3",
+        "name":"G-shock 2815",
+        "description":"Best casio G-Shock watches by price range",
+        "price":5000,
+        "discount":10,
+        "model":"G-rado",
+         "category":
+            {
+                "name":"watch",
+                "imageURL":"https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg"
+        
+            },
+        "stockQuantity":15,
+        "imageURL":["https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg",
+        "https://i.pinimg.com/originals/4e/df/df/4edfdff78d9b46aa7e20451d8752f757.jpg"
+    ],
+     "reviews":[{
+        "username": "ram",
+        "rating":4.5,
+        "message":"very nice product"
+}]
+     },
+{
+        "id":"4",
+        "name":"G-shock 2815",
+        "description":"Best casio G-Shock watches by price range",
+        "price":5000,
+        "discount":10,
+        "model":"G-rado",
+         "category":
+            {
+                "name":"watch",
+                "imageURL":"https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg"
+        
+            },
+        "stockQuantity":15,
+        "imageURL":["https://i.pinimg.com/564x/18/fb/dc/18fbdc5cabf0f1a7c4272a9026ab9732.jpg",
+        "https://i.pinimg.com/originals/4e/df/df/4edfdff78d9b46aa7e20451d8752f757.jpg"
+    ],
+    "reviews":[{
+        "username": "ram",
+        "rating":4.5,
+        "message":"very nice product"
+    }]
+}
+]
