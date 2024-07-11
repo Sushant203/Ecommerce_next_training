@@ -21,7 +21,8 @@
         "username": "ram",
         "rating":4.5,
         "message":"very nice product"
-}]
+}],
+"avgRating":4.7
 },
 
 {
@@ -45,7 +46,8 @@
         "username": "ram",
         "rating":4.5,
         "message":"very nice product"
-}]
+}],
+"avgRating":4.7
      },
 {
         "id":"3",
@@ -68,7 +70,8 @@
         "username": "ram",
         "rating":4.5,
         "message":"very nice product"
-}]
+}],
+"avgRating":4.7
      },
 {
         "id":"4",
@@ -91,6 +94,7 @@
         "username": "ram",
         "rating":4.5,
         "message":"very nice product"
-    }]
+    }],
+    "avgRating":4.7
 }
 ]

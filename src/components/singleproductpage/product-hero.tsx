@@ -2,6 +2,10 @@ import { IProduct } from '@/types/product'
 import { getDiscountedPrice } from '@/utils/getDiscountedPrice'
 import Image from 'next/image'
 import React from 'react'
+import RatingStar from '../shared-components/rating-star'
+import { Button } from '../ui/button'
+import { FaMinus, FaPlus } from 'react-icons/fa6'
+import QuantityInput from './Quantity-input'
 
 type Props = {
     product: IProduct
@@ -13,15 +17,15 @@ export default function SingleProductHero({ product }: Props) {
     const discountPrice = getDiscountedPrice(product.price, product.discount)
 
     return (
-        <main className='grid grid-cols-2 gap-10 mt-20'>
-            <section>
+        <main className=' container grid grid-cols-3 gap-10 mt-20 bg-slate-200 rounded-md py-2'>
+            <section className='rounded-md bg-slate-100'>
                 <figure>
                     <Image
                         src={primaryImage}
                         alt={product.name}
-                        height={500}
-                        width={500}
-                        className='max-w-full max-h-[400px] object-cover rounded-md'
+                        height={200}
+                        width={450}
+                        className='max-w-full max-h-[300px] x rounded-md'
                     />
                     <figcaption className='sr-only'>{product.name}</figcaption>
                 </figure>
@@ -33,8 +37,8 @@ export default function SingleProductHero({ product }: Props) {
                                 <Image
                                     src={imageUrl}
                                     alt={product.name}
-                                    height={100}
-                                    width={100}
+                                    height={60}
+                                    width={60}
                                     className='rounded-md max-w-[100px] max-h-[100px] object-cover'
                                 />
                                 <figcaption className='sr-only'>{product.name}</figcaption>
@@ -45,8 +49,11 @@ export default function SingleProductHero({ product }: Props) {
             </section>
 
             <section>
-                <h1 className='text-3xl font-bold'>{product.name}</h1>
-
+                <h1 className='text-3xl font-sans'>{product.name}</h1>
+                <h1 className='text-2xl font-sans'>{product.description}</h1>
+                    <section>
+                    
+                    </section>
                 <div className='mt-10'>
                     <p className='text-2xl text-orange-500 font-semibold'>Rs. {discountPrice}</p>
                     <div className='flex gap-2'>
@@ -54,6 +61,14 @@ export default function SingleProductHero({ product }: Props) {
                         <span className='text-sm'>{product.discount}%</span>
                     </div>
                 </div>
+            
+                <section className='flex gap-3'>
+                    <RatingStar rating={product.avgRating} />
+                    <span className='text-orange-500'>{product.avgRating} ratings</span>
+                    <span className='text-muted-foreground '>{product.reviews.length}</span>
+                </section>
+                <QuantityInput />
+                <section></section>
             </section>
         </main>
     )

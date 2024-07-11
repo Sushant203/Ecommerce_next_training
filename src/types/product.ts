@@ -11,4 +11,5 @@ export interface IProduct{
     stockQuantity:number,
     model:string,
     reviews: TReview[],
+    avgRating: number,
 }
