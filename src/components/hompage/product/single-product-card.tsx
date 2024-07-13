@@ -2,15 +2,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { IProduct } from '@/types/product'
 import { getDiscountedPrice } from '@/utils/getDiscountedPrice'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 
-type Props = {product:IProduct}
+type Props = {product:IProduct,
+  // variant?: 'variant1'| 'variant2'| 'variant3'
+}
 
 const SingleProductCard = ({ product }: Props) => {
   const discountPrice= getDiscountedPrice(product.price,product.discount)
   return (
-    <Card title={product.name} className='container rounded-lg hover:shadow-lg transition-all'>
+ <Link href={`/products/${product.id}`}>  <Card title={product.name} className='container rounded-lg hover:shadow-lg transition-all'>
         <CardHeader className='border p-0'>
     <Image src={product.imageURL[1]} alt={product.name} height={200} width={100} className='w-full object-cover max-h-40 rounded-md ' />
     <figcaption className='sr-only'>{product.name}</figcaption>
@@ -29,7 +32,18 @@ const SingleProductCard = ({ product }: Props) => {
            </section>
         </CardContent>
     </Card>
+    </Link> 
   )
 }
 
+// function CardVariant1(){
+//   return<></>
+  
+// }
+// function CardVariant2(){
+// return<></>
+// }
+// function CardVariant3(){
+// return<></>
+// }
 export default SingleProductCard

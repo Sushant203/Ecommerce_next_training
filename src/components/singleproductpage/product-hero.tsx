@@ -67,9 +67,10 @@ export default function SingleProductHero({ product }: Props) {
                     <span className='text-orange-500'>{product.avgRating} ratings</span>
                     <span className='text-muted-foreground '>{product.reviews.length}</span>
                 </section>
-                <QuantityInput />
+                <QuantityInput stockQuantity={product.stockQuantity}/>
                 <section></section>
             </section>
+           
         </main>
     )
 }

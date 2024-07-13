@@ -19,7 +19,17 @@
     ],
      "reviews":[{
         "username": "ram",
-        "rating":4.5,
+        "rating":4,
+        "message":"very nice product"
+},
+{
+        "username": "ram",
+        "rating":3.5,
+        "message":"very nice product"
+},
+{
+        "username": "ram",
+        "rating":3.2,
         "message":"very nice product"
 }],
 "avgRating":4.7
@@ -45,6 +55,16 @@
      "reviews":[{
         "username": "ram",
         "rating":4.5,
+        "message":"very nice product"
+},
+{
+        "username": "shyam",
+        "rating":3.6,
+        "message":"very nice product"
+},
+{
+        "username": "krishna",
+        "rating":4,
         "message":"very nice product"
 }],
 "avgRating":4.7
