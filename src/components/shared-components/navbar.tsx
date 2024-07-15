@@ -1,8 +1,10 @@
+"use client";
 import Link from 'next/link'
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { IoCartOutline } from "react-icons/io5";
 import { Input } from "@/components/ui/input"
+import { signIn, signOut } from 'next-auth/react';
 
 type Props = {}
 
@@ -17,10 +19,10 @@ const Navbar = (props: Props) => {
                 <Link href={'/'}>Home</Link>
                 </li>
                 <li>
-                <Link href={'/'}>Product</Link>
+                <Link href={'/products'}>Product</Link>
                 </li>
                 <li>
-                <Link href={'/'}>Contact</Link>
+                <Link href={'/contact'}>Contact</Link>
             </li>
         </ul>
 
@@ -32,6 +34,8 @@ const Navbar = (props: Props) => {
         <section className='flex items-center space-x-4'>
           <Button asChild>
             <Link href={'/login'}>Login</Link></Button>
+          <Button onClick={()=> signOut()}>
+           LogOut</Button>
       <Button asChild>
         <Link href={'/customer/cart'}> <IoCartOutline  size={20} /></Link></Button>
     
