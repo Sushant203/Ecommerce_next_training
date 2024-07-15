@@ -31,8 +31,11 @@ const Navbar = (props: Props) => {
        </section>
         <section className='flex items-center space-x-4'>
           <Button asChild>
-            <Link href={'\login'}>Login</Link></Button>
-           <IoCartOutline  size={20} />
+            <Link href={'/login'}>Login</Link></Button>
+      <Button asChild>
+        <Link href={'/customer/cart'}> <IoCartOutline  size={20} /></Link></Button>
+    
+          
             
         </section>
     </nav>
