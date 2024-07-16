@@ -38,7 +38,7 @@ export const authOptions: NextAuthOptions = {
         })
     ],
     pages: {
-        signIn: '/signin',
-        // signOut:"api/auth/signout"
+        signIn: '/auth/signin',
+        signOut:"/auth/signout"
     },
 };

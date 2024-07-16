@@ -34,8 +34,8 @@ const Navbar = (props: Props) => {
         <section className='flex items-center space-x-4'>
           <Button asChild>
             <Link href={'/login'}>Login</Link></Button>
-          <Button onClick={()=> signOut()}>
-           LogOut</Button>
+          {/* <Button onClick={()=> signOut()}>
+           LogOut</Button> */}
       <Button asChild>
         <Link href={'/customer/cart'}> <IoCartOutline  size={20} /></Link></Button>
     
