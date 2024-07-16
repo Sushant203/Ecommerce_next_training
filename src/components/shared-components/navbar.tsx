@@ -32,10 +32,12 @@ const Navbar = (props: Props) => {
         </section>
        </section>
         <section className='flex items-center space-x-4'>
-          <Button asChild>
-            <Link href={'/login'}>Login</Link></Button>
-          {/* <Button onClick={()=> signOut()}>
-           LogOut</Button> */}
+          <Button asChild variant={'secondary'}>
+            <Link href={'/auth/login'}>Login</Link></Button>
+          <Button onClick={()=> signOut()}  variant={'secondary'}>
+           LogOut</Button>
+           <Button asChild  variant={'secondary'}>
+            <Link href={'/auth/register'}>Register</Link></Button>
       <Button asChild>
         <Link href={'/customer/cart'}> <IoCartOutline  size={20} /></Link></Button>
     

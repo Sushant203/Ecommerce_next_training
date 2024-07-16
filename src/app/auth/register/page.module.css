@@ -1,0 +1,8 @@
+.form{
+    background-color: red;
+    /* display: grid; */
+    padding: 10px 20px;
+    border: 1px none;
+    border-radius: 30px;
+    /* grid-template-columns: auto auto */
+}
