@@ -47,7 +47,7 @@ const Signin = (props: Props) => {
     <section className="container py-10">
       <Form {...form} >
         <form onSubmit={form.handleSubmit(onSubmit)} action="" className="w-1/4 space-y-6 border-2 border-black p-4 rounded-xl">
-      <h2 className="text-center font-bold font-sans bg-[#F97316] text-white rounded-md">SignUp Form</h2>
+      <h2 className="text-center font-bold font-sans bg-[#F97316] text-white rounded-md p-3">SignUp Form</h2>
          {signInFormField.map(formField=>(
            <FormField
            key={formField.name}

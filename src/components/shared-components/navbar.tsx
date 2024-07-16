@@ -33,7 +33,7 @@ const Navbar = (props: Props) => {
        </section>
         <section className='flex items-center space-x-4'>
           <Button asChild variant={'secondary'}>
-            <Link href={'/auth/login'}>Login</Link></Button>
+            <Link href={'/auth/signin'}>Login</Link></Button>
           <Button onClick={()=> signOut()}  variant={'secondary'}>
            LogOut</Button>
            <Button asChild  variant={'secondary'}>
