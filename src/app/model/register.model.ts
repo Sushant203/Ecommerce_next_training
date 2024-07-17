@@ -4,7 +4,7 @@ import { z } from "zod"
 
 
 export const registerFormSchema = z.object({
-    username: z.string({required_error:'please enter your valid username'}).min(4,{message:"enter your username"}).max(20),
+    fullname: z.string({required_error:'please enter your valid username'}).min(4,{message:"enter your username"}).max(20),
   email: z.string().email({message:'please enter valid email'}),
   password: z.string({required_error:'please enter something'}).min(1,{message:"enter your password"}),
   confirmPassword: z.string().min(1) 
@@ -12,7 +12,7 @@ export const registerFormSchema = z.object({
 
 export type TRegisterFormSchema= z.infer<typeof registerFormSchema> //form field ma generic field use vayeko
 export const registerFormDefaultValues:Partial<TRegisterFormSchema>={
-    username:"",
+    fullname:"",
     email:"",
     password:"",
     confirmPassword:""
@@ -20,7 +20,7 @@ export const registerFormDefaultValues:Partial<TRegisterFormSchema>={
 export const registerFormField: TFormField<TRegisterFormSchema>[]=[
      {
         label:'Username',
-        name:'username',
+        name:'fullname',
         placeholder:'Eg. enter your username',
         type: EInputType.TEXT,
         required: true,

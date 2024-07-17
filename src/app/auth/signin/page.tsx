@@ -16,9 +16,8 @@ import {
 
 
 import {signIn} from "next-auth/react";
-
-
-
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import { Input } from "@/components/ui/input"
 import { SignInFormDefaultValues, signInFormField, singInFormSchema, TSingInFormSchema } from "@/app/model/sign-in.model"
 
@@ -34,20 +33,22 @@ const Signin = (props: Props) => {
   })
 
   async function onSubmit(values: TSingInFormSchema) {
-     await signIn("credentials",{
-      redirect:true,
-      email:values.email,
-      password:values.password,
-      callbackUrl:props.callbackUrl??"http://localhost:3000/customer/cart",
-    })
+     try {
+      await signIn("credentials",{ ...values,
+      callbackUrl:"/"
+      })
    console.log(values);
-  }
+  
+     } catch (error) {
+      toast.error("error occured!!");
+     }
+    }
 
   return (
     <section className="container py-10">
       <Form {...form} >
         <form onSubmit={form.handleSubmit(onSubmit)} action="" className="w-1/4 space-y-6 border-2 border-black p-4 rounded-xl shadow-md">
-      <h2 className="text-center font-bold font-sans bg-[#F97316] text-white rounded-md p-3">SignUp Form</h2>
+      <h2 className="text-center font-bold font-sans bg-[#F97316] text-white rounded-md p-3">SignIn Form</h2>
          {signInFormField.map(formField=>(
            <FormField
            key={formField.name}
@@ -57,7 +58,7 @@ const Signin = (props: Props) => {
               <FormItem>
                 <FormLabel>{formField.label}</FormLabel>
                 <FormControl>
-                  <Input placeholder={formField.placeholder} required={formField.required} {...field} />
+                  <Input placeholder={formField.placeholder} required={formField.required} type={formField.type} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -67,6 +68,7 @@ const Signin = (props: Props) => {
           <Button type="submit" variant={"default"} >Login</Button>
         </form>
       </Form>
+          <ToastContainer/>
     </section>
   )
 }

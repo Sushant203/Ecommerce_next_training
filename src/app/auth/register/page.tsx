@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { registerFormDefaultValues, registerFormField, registerFormSchema, TRegisterFormSchema } from '@/app/model/register.model';
-import classes from "./page.module.css";
+// import classes from "./page.module.css";
 
 type Props = {};
 
